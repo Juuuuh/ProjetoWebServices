@@ -2,7 +2,6 @@ package com.juliaestagio.WebService.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.juliaestagio.WebService.entities.pk.OrderItemPK;
-import jakarta.persistence.Embeddable;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -62,6 +61,10 @@ public class OrderItem implements Serializable {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Double getSubTotal(){
+        return price * quantity;
     }
 
     @Override
