@@ -3,17 +3,17 @@ package com.juliaestagio.WebService.resources.exceptions;
 import java.io.Serializable;
 import java.time.Instant;
 
-public class StandartError implements Serializable {
+public class StandardError implements Serializable {
     private Instant timestamp;
     private Integer status;
     private String error;
     private String message;
     private String path;
 
-    public StandartError(){
+    public StandardError(){
     }
 
-    public StandartError(Instant timestamp, Integer status, String error, String message, String path) {
+    public StandardError(Instant timestamp, Integer status, String error, String message, String path) {
         this.timestamp = timestamp;
         this.status = status;
         this.error = error;
